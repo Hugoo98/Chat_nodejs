@@ -1,7 +1,7 @@
 {
   "name": "Projet-chat-nodejs",
   "version": "1.0.0",
-  "description": "projet node.js basé sur javascript socket.io mongoDB",
+  "description": "projet node.js codé en javascript socket.io mongoDB",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hugoo98/Projet-chat-nodejs"
+    "url": "https://github.com/Hugoo98/Chat_nodejs"
   },
   "keywords": [
     "nodejs",
