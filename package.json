@@ -1,0 +1,38 @@
+{
+  "name": "Projet-chat-nodejs",
+  "version": "1.0.0",
+  "description": "projet node.js basé sur javascript socket.io mongoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hugoo98/Projet-chat-nodejs"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "mongodb",
+    "socket.io",
+    "real-time",
+    "chat-app"
+  ],
+  "author": "tachour omar",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "lodash": "^4.17.15",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.8.4",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7",
+    "shortid": "^2.2.15",
+    "socket.io": "^2.3.0"
+  }
+}

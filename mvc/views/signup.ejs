@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title><%= title %></title>
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/elegant-icons-style.css">
+</head>
+<body class="login-screen">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"> Ichat nodejs </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li> <a href="/"><span class="glyphicon glyphicon-home"></span> Accueil</a> </li>
+      <li><a href="/chat">Chat</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <% if(user){ %>
+          <li><a href="#"><b>Salut, <%= user.username %></b></a></li>
+          <li><a href="/user/logout"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+        <% } else{ %>
+          <li><a href="/user/signup"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
+          <li><a href="/user/login"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <style> h2.solid {border-style: solid;
+                      border-width: 4px;
+                    background-color: blanchedalmond;};
+    </style>
+  <div class="login-box">
+    <br>
+ <h2 class="solid"> <b>INSCRIPTION</b></h2>
+ <br>
+  <form class="login-form" action="/user/api/v1/signup" method="post">
+    <p id="error1"></p>
+    <div class="input-block">
+      <span class="input-box"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="uname" type="text" name="username" placeholder="Insérez votre identifiant" autofocus autocomplete="off" required/>
+      <span id="aa" class="glyphicon glyphicon-ok"></span>
+      <span id="bb" class="glyphicon glyphicon-remove"></span>
+    </div>
+    <div class="input-block">
+        <span class="input-box"><i class="glyphicon glyphicon-envelope"></i></span>
+        <input id="email" type="text" name="email" placeholder="Insérez votre adresse mail">
+      </div>
+     <div class="input-block">
+      <span class="input-box"><i class="glyphicon glyphicon-lock"></i></span>
+       <input id="password" type="password" name="password" placeholder="Tapez votre mot de passe" required/>
+     </div>
+     <button class="btn btn-danger btn-lg btn-block" type="submit" name="submit"><b>S'inscrire</b></button><br>
+     <p><b>Êtes-vous déjà membre?</b> </p>
+     <a href="/user/login"  class="btn btn-success btn-lg btn-block"><b>Se connecter ici</b></a><br>
+   </form>
+ </div>
+ </main>
+<!-- fichiers javascript utilisés -->
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/moment.min.js"></script>
+<script src="/js/socket.io-1.7.3.js"></script>
+</body>
+</html>

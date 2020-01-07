@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title><%= title %></title>
+<link rel="stylesheet" href="/w3.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/elegant-icons-style.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"> Ichat nodejs </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li> <a href="/"><span class="glyphicon glyphicon-home"></span> Accueil</a> </li>
+      <li><a href="/chat">Chat</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <% if(user){ %>
+          <li><a href="#"><b><%= user.username %></b></a></li>
+          <li><a href="/user/logout"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+        <% } else{ %>
+          <li><a href="/user/signup"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
+          <li><a href="/user/login"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <style> h2.solid {border-style: solid;
+      border-width: 4px;};
+  </style>
+    <div class="container-fluid">
+      <input type="hidden" id="user" value="<%= user.username %>"/>
+      <div class="row">
+         <!-- espace d'affichage de messages  -->
+      <div class="w3-row  w3-grey w3-mobile"style="position: absolute;height:90%; width:100%;">
+        <div class="col-sm-8">
+        </br>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 id="frndName">Discussions</h4>
+            </div>
+            <div class="panel-body" id="panel2">
+              <p id="loading">Chargement...</p>
+              <p id="noChat">Plus de chats à afficher.....</p>
+              <p id="initMsg">Démarrez la Discussions!!!</p>
+              <ul id="messages"></ul>
+            </div>
+            <div class="panel-footer">
+              <form id="chatForm" action="">
+                <span class="input-box"><i class="glyphicon glyphicon-edit"></i></span>
+                <input id="myMsg" class="input-box-send" autocomplete="off" placeholder="Ecrivez un message...">
+                <button id="sendBtn" class="btn btn-success"><span class="glyphicon glyphicon-send"></span> <b>Envoyer</b></button>
+              </form>
+              </form>
+            </div>
+          </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-info">
+            <div class="panel-heading" >
+              <h2 class = "solid"> <b>Liste d'amis</b></h2>
+              <a href="#"><span id="totalOnline" class="badge">0</span>  utilisateurs en ligne</a>
+            </div>
+            <div class="panel-body" id="panel1">
+             
+              <ul id="list" ></ul>
+
+              <p style="background-color:rgba(0, 162, 255, 0.226) ;">  Chat en groupe: cliquez sur le bouton Groupe</br>
+                                                                         Chat avec un utilisateur : Cliquez sur un user</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+ <!-- fichiers javascript utilisés -->
+ <script src="/js/jquery-3.1.1.min.js"></script>
+ <script src="/js/bootstrap.min.js"></script>
+ <script src="/js/moment.min.js"></script>
+ <script src="/js/socket.io-1.7.3.js"></script>
+  <script src="/js/scriptForChat.js"></script>
+</body>
+</html>
+
