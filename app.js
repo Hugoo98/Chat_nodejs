@@ -21,7 +21,7 @@ require("./libssl/chat.js").sockets(http);
 app.use(logger("dev"));
 
 //connexion a la DB
-const dbPath = "mongodb://localhost/socketChatDB";
+const dbPath = `mongodb://github_demo:Pass\#12@ds149511.mlab.com:49511/socketionodejschat`;
 mongoose.connect(dbPath, { useNewUrlParser: true });
 mongoose.connection.once("open", function() {
   console.log("Connexion à la database établie avec succès.");
