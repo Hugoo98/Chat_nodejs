@@ -2,8 +2,9 @@
 
 
 ## Description
+
+	Application web chat nodeJs codé en javascript. elle permet de créer des compte d'utilisateurs, le chat entre(2 utilisateur) pour discussion par groupe:
   
-  Application web chat nodeJs codé en javascript. elle permet de créer des compte d'utilisateurs, le chat entre(2 utilisateur) pour discussion par groupe:
 	1/ coté serveur
 		- création de comptes		
 		- liste d'utilisateurs
@@ -38,6 +39,5 @@
 	3)Enfin, Sur le navigateur taper http://localhost:5000.
 ```
 ## Codé sur :
-
-Système : Linux Ubuntu
-Editeur de texte : Visual Studio Code.
+	Système : Linux Ubuntu
+	Editeur de texte : Visual Studio Code.
