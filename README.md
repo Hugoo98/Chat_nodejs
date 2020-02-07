@@ -20,7 +20,7 @@
 
 ##Conditions préalables 
 
-  Pour lancer l'application on aura besoin d'installer : Git  NodeJs  Socket.IO  NPM  MongoDB
+  	Pour lancer l'application on aura besoin d'installer : Git  NodeJs  Socket.IO  NPM  MongoDB
 
 
 ##Fonctionnement
